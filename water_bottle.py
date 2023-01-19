@@ -8,8 +8,11 @@ def main():
     low_hsv = [97, 159, 112]
     high_hsv = [120, 255, 255]
 
-    low_rgb = [0, 50, 140]
-    high_rgb = [100, 150, 255]
+    # low_rgb = [0, 50, 140]
+    # high_rgb = [100, 150, 255]
+
+    low_rgb = [0, 0, 231]
+    high_rgb = [175, 255, 255]
     
     cap = cv2.VideoCapture(0)
 
@@ -41,7 +44,7 @@ def main():
 
         # Display the resulting frames
         cv2.imshow('frame', frame)
-        # cv2.imshow('mask', mask)
+        cv2.imshow('mask', mask)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
